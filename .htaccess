@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php 
+
+<FilesMatch ".env.php|.DbConnect.php|.header.php">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
